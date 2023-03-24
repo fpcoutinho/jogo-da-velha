@@ -1,0 +1,166 @@
+:root {
+  --bg: #152940;
+  --primary: #f8fafc;
+  --secondary: #cbd5e1;
+  --tertiary: #334155;
+  --text-highlight: #0ea5e9;
+  --o: #4ade80;
+  --o-hover: #22c55e;
+  --x: #a855f7;
+  --x-hover: #c084fc;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--secondary);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  color: var(--tertiary);
+  text-decoration: none;
+  font-size: medium;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh;
+  height: 4vh;
+}
+
+main {
+  min-height: 88vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.placar {
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  gap: 300px;
+}
+
+.tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.casa {
+  height: 100px;
+  width: 100px;
+  border: var(--text-highlight) 2px solid;
+  box-shadow: 0 0 10px var(--tertiary);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.casa.marcado.x {
+  background-image: url(recursos/x.png);
+}
+
+.casa.marcado.o {
+  background-image: url(recursos/o.png);
+}
+
+.casa:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease-in;
+  box-shadow: 0 0 20px var(--tertiary);
+  background-image: url(recursos/o.png);
+}
+
+.casa:active {
+  transform: scale(0.99);
+  transition: 0.2s ease-in;
+  box-shadow: 0 0 50px var(--tertiary);
+}
+
+.btn {
+  border: var(--text-highlight) 2px solid;
+  color: var(--text-highlight);
+  background-color: var(--bg);
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--tertiary);
+  margin: 10px;
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px var(--tertiary);
+  background-color: var(--bg);
+}
+
+.btn:active {
+  transform: translate(1px, 1px);
+  transition: 0.1s ease-in;
+}
+
+.mensagem.active {
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.mensagem.hidden {
+  display: none;
+}
+
+.jogador-x {
+  text-align: center;
+}
+
+.jogador-x h3 {
+  color: var(--x);
+}
+
+.jogador-o {
+  text-align: center;
+}
+
+.jogador-o h3 {
+  color: var(--o);
+}

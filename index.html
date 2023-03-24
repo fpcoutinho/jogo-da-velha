@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="recursos/favicon.ico">
+
+    <title>Jogo da Velha</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Jogo da Velha</h1>
+    </header>
+
+    <main>
+        <div class="placar">
+            <div class="jogador-x">
+                <h3>Player X</h3>
+                <h2 class="placar-jogador-x">0</h2>
+            </div>
+            <div class="jogador-o">
+                <h3>Player O</h3>
+                <h2 class="placar-jogador-o">0</h2>
+            </div>
+        </div>
+        <div class="tabuleiro">
+            <div class="casa" id="casa-1"></div>
+            <div class="casa" id="casa-2"></div>
+            <div class="casa" id="casa-3"></div>
+            <div class="casa" id="casa-4"></div>
+            <div class="casa" id="casa-5"></div>
+            <div class="casa" id="casa-6"></div>
+            <div class="casa" id="casa-7"></div>
+            <div class="casa" id="casa-8"></div>
+            <div class="casa" id="casa-9"></div>
+        </div>
+
+        <div class="botoes">
+            <button class="btn reiniciar" type="button">Reiniciar</button>
+        </div>
+
+        <div class="mensagem hidden">
+            <h2 class="mensagem-texto">Player x venceu!</h2>
+            <div class="botoes">
+                <button class="btn reiniciar" type="button">Jogar Novamente</button>
+                <button class="btn fechar" type="button">Sair do Jogo</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://github.com/fpcoutinho/">Copyright © The Odin Project 2023 by fpcoutinho <i
+                class="fa fa-github"></i></a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
